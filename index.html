@@ -9,63 +9,72 @@
 </head>
 <body>
     
+<h1 style="text-align:center; color: rgb(46, 46, 56);padding: 20px; font-family:'Courier New', Courier, monospace; font-weight: bold;">
+   Scientifi Calculator</h1>
 
-
-<div class="container d-flex justify-content-center align-items-center w-50"
-style="height: 100vh;">
-
-<table class="table">
+<div class="container d-flex justify-content-center align-items-center"
+style="height: 100vh; width: 60vh;">
+<table class="table" style="background: #141414; border-radius: 10px;">
     <thead>
       <tr>
-        <th colspan="5"><input type="text" id="result" class="form-control"></th>
+        <th colspan="5" style="padding: 20px;"><input type="text" id="result" class="form-control bg-secondary"></th>
     </tr>
 </thead>
+
+
+
 <tbody>
+   <tr>
+   
+      <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.log')">log</button></td>
+      <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.log10')">log10</button></td>
+      <td><button class="btn btn-secondary text-center w-100" onclick="getNum('&#40')">&#40</button></td>
+      <td><button class="btn btn-secondary text-center w-100" onclick="getNum('&#41')">&#41</button></td>
+      <td><button class="btn btn-info text-center w-100" onclick="deleteNum()">del</button></td>
+    </tr>
 
    <tr>
-      <td><button class="btn btn-dark text-center  w-100" onclick="getNum('&#178')">&#178;</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('2&sup2;')">2&sup2;</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('Math.log')">log</button></td>
-      <td><button class="btn btn-dark text-center  w-100" onclick="getNum('Math.PI')">&pi;</button></td>
-    </tr>
-   <tr>
       
-       <td><button class="btn btn-dark text-center  w-100" onclick="getNum('Math.sin')">sin</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('Math.Cos')">cos</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('Math.tan')">tan</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('&#40')">&#40</button></td>
-       <td><button class="btn btn-dark text-center w-100" onclick="getNum('&#41')">&#41</button></td>
-    </tr>
+       <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.sqrt')">&radic;</button></td>
+       <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.PI')">&pi;</button></td>
+       <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.tan')">tan</button></td>
+       <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.Cos')">cos</button></td>
+       <td><button class="btn btn-secondary text-center w-100" onclick="getNum('Math.sin')">sin</button></td>  
+</tr>
+
  <tr>
-   <td><button class="btn btn-dark text-center  w-100" onclick="getNum('7')">7</button></td>
-    <td><button class="btn btn-dark text-center  w-100" onclick="getNum('8')">8</button></td>
+    <td><button class="btn btn-dark text-center w-100" onclick="getNum('7')">7</button></td>
+    <td><button class="btn btn-dark text-center w-100" onclick="getNum('8')">8</button></td>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('9')">9</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="removeNum()">AC</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="clearScr()">C</button></td>
+    <td><button class="btn btn-warning text-center w-100" onclick="removeNum()">AC</button></td>
+    <td><button class="btn btn-warning text-center w-100" onclick="clearScr()">C</button></td>
  </tr>
 
  <tr>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('4')">4</button></td>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('5')">5</button></td>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('6')">6</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="getNum('*')">*</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="getNum('/')">/</button></td>
+    <td><button class="btn btn-secondary text-center w-100" onclick="getNum('*')">*</button></td>
+    <td><button class="btn btn-secondary text-center w-100" onclick="getNum('/')">/</button></td>
+    
  </tr>
 
  <tr>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('1')">1</button></td>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('2')">2</button></td>
     <td><button class="btn btn-dark text-center w-100" onclick="getNum('3')">3</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="getNum('+')">+</button></td>
-    <td><button class="btn btn-dark text-center w-100" onclick="getNum('-')">-</button></td>
- </tr>
+    <td><button class="btn btn-secondary text-center w-100" onclick="getNum('+')">+</button></td>
+    <td><button class="btn btn-secondary text-center w-100" onclick="getNum('-')">-</button></td>
+   
+   </tr>
 
  <tr>
+   <td><button class="btn btn-secondary text-center w-100" onclick="getNum('rad')">rad</button></td>
    <td><button class="btn btn-dark text-center w-100" onclick="getNum('0')">0</button></td> 
    <td><button class="btn btn-dark text-center w-100" onclick="getNum('.')">.</button></td>
    <td><button class="btn btn-dark text-center w-100" onclick="getNum('Math.E')">E</button></td>
-   <td><button class="btn btn-dark text-center  w-100" onclick="getNum('&#176;')">&#176;</button></td>
    <td><button class="btn btn-dark text-center w-100" onclick="getAns()">=</button></td>
+   
    </tbody>
 
 </div>

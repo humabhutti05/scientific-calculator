@@ -20,3 +20,8 @@ function getAns() {
   );
   console.log(document.getElementById("result").value);
 }
+
+function deleteNum(){
+  var res = document.getElementById('result').value
+  document.getElementById('result').value = document.getElementById('result').value.slice(0,res.length-1);
+}
